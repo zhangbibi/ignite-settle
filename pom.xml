@@ -9,6 +9,7 @@
     <modules>
         <module>settle-client</module>
 		<module>settle-server</module>
+		<module>settle-common</module>
 	</modules>
     <packaging>pom</packaging>
 

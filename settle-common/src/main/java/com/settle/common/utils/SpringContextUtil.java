@@ -1,4 +1,4 @@
-package com.settle.utils;
+package com.settle.common.utils;
 
 import org.springframework.context.ApplicationContext;
 
