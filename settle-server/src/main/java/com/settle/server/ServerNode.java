@@ -1,6 +1,6 @@
 package com.settle.server;
 
-import com.settle.utils.SpringContextUtil;
+import com.settle.common.utils.SpringContextUtil;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.configuration.IgniteConfiguration;

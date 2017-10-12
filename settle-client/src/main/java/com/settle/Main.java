@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @ImportResource(locations = {"classpath:ignite-client.xml"})
 @SpringBootApplication
-@MapperScan("com.settle.mapper")
+//@MapperScan("com.settle.mapper")
 public class Main {
 
     public static void main(String[] args) {
