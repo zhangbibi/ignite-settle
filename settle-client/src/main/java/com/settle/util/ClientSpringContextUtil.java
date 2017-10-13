@@ -1,8 +1,8 @@
-package com.settle.common.utils;
+package com.settle.util;
 
 import org.springframework.context.ApplicationContext;
 
-public class SpringContextUtil {
+public class ClientSpringContextUtil {
 
     private static ApplicationContext applicationContext;
 
@@ -13,7 +13,7 @@ public class SpringContextUtil {
 
     //设置上下文
     public static void setApplicationContext(ApplicationContext applicationContext) {
-        SpringContextUtil.applicationContext = applicationContext;
+        ClientSpringContextUtil.applicationContext = applicationContext;
     }
 
     //通过名字获取上下文中的bean

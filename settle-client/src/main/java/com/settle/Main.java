@@ -1,7 +1,7 @@
 package com.settle;
 
-import com.settle.common.utils.SpringContextUtil;
-import org.mybatis.spring.annotation.MapperScan;
+import com.settle.client.ClientNode;
+import com.settle.util.ClientSpringContextUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,7 +16,10 @@ public class Main {
     public static void main(String[] args) {
 
         ApplicationContext applicationContext = SpringApplication.run(Main.class, args);
-        SpringContextUtil.setApplicationContext(applicationContext);
+        ClientSpringContextUtil.setApplicationContext(applicationContext);
+
+        ClientNode clientNode = (ClientNode) applicationContext.getBean("clientNode");
+        clientNode.start();
     }
 
 

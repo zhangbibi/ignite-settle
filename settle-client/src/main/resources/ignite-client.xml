@@ -5,7 +5,8 @@
        http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="ignite.cluster.cfg" class="org.apache.ignite.configuration.IgniteConfiguration">
+    <bean id="ignite.client.cfg" class="org.apache.ignite.configuration.IgniteConfiguration">
+        <property name="clientMode" value="true"></property>
         <property name="discoverySpi">
             <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
                 <property name="ipFinder">

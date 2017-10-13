@@ -1,7 +1,7 @@
 package com.settle;
 
-import com.settle.common.utils.SpringContextUtil;
 import com.settle.server.ServerNode;
+import com.settle.util.SpringContextUtil;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,6 +21,5 @@ public class Main {
         ServerNode serverNode = (ServerNode) applicationContext.getBean("serverNode");
         serverNode.start();
     }
-
 
 }

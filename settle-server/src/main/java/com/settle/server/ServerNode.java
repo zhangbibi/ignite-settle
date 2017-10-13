@@ -1,6 +1,6 @@
 package com.settle.server;
 
-import com.settle.common.utils.SpringContextUtil;
+import com.settle.util.SpringContextUtil;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.configuration.IgniteConfiguration;
@@ -17,4 +17,5 @@ public class ServerNode {
         IgniteConfiguration cfg = (IgniteConfiguration) SpringContextUtil.getBean("ignite.cluster.cfg");
         Ignite ignite = Ignition.start(cfg);
     }
+
 }
