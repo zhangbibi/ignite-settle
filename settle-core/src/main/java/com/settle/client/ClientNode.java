@@ -1,5 +1,6 @@
 package com.settle.client;
 
+import com.settle.task.CharacterCountTask;
 import com.settle.util.SpringContextUtil;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
@@ -18,18 +19,21 @@ public class ClientNode {
         IgniteConfiguration cfg = (IgniteConfiguration) SpringContextUtil.getBean("ignite.client.cfg");
         Ignite ignite = Ignition.start(cfg);
 
-        ClusterGroup remoteGroup = ignite.cluster().forRemotes();
+//        ClusterGroup remoteGroup = ignite.cluster().forRemotes();
+//
+//        ExecutorService exec = ignite.executorService(remoteGroup);
+//        for (final String word : "Print words using runnable".split(" ")) {
+//            // Execute runnable on some node.
+//            exec.submit(new IgniteRunnable() {
+//                @Override
+//                public void run() {
+//                    System.out.println(">>> Printing '" + word + "' on this node from grid job.");
+//                }
+//            });
+//        }
 
-        ExecutorService exec = ignite.executorService(remoteGroup);
-        for (final String word : "Print words using runnable".split(" ")) {
-            // Execute runnable on some node.
-            exec.submit(new IgniteRunnable() {
-                @Override
-                public void run() {
-                    System.out.println(">>> Printing '" + word + "' on this node from grid job.");
-                }
-            });
-        }
+        int cnt = ignite.compute().execute(CharacterCountTask.class, "Hello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled WorldHello Grid Enabled World!");
+        System.out.println("result ====== " + cnt);
 
     }
 }
