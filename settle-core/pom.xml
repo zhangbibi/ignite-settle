@@ -9,15 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.settle.server</groupId>
-    <artifactId>settle-server</artifactId>
+    <groupId>com.settle</groupId>
+    <artifactId>settle-core</artifactId>
     <packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.settle</groupId>
-            <artifactId>settle-core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
 </project>

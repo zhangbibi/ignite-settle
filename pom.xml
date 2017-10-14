@@ -10,7 +10,9 @@
         <module>settle-client</module>
 		<module>settle-server</module>
 		<module>settle-common</module>
-	</modules>
+		<module>settle-server2</module>
+        <module>settle-core</module>
+    </modules>
     <packaging>pom</packaging>
 
 	<name>ignite-settle</name>

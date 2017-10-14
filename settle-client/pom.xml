@@ -15,8 +15,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.settle.common</groupId>
-            <artifactId>common</artifactId>
+            <groupId>com.settle</groupId>
+            <artifactId>settle-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
