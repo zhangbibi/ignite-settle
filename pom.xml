@@ -9,7 +9,7 @@
     <modules>
         <module>settle-client</module>
 		<module>settle-server</module>
-s		<module>settle-server2</module>
+		<module>settle-server2</module>
         <module>settle-core</module>
     </modules>
     <packaging>pom</packaging>
